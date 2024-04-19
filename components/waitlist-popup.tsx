@@ -30,7 +30,7 @@ export function WaitlistPoupup({ buttonClass }: { buttonClass?: string }) {
             Request Early Access
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] bg-yellow-200 border-none">
         <DialogHeader>
           <DialogTitle className="font-semibold font-heading text-2xl pb-3">
             Request Early Access
