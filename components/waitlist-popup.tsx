@@ -11,10 +11,14 @@ import {
 } from "@/components/ui/dialog";
 import { Waitlist } from "./waitlist";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 export function WaitlistPoupup({ buttonClass }: { buttonClass?: string }) {
+
+    const [open, setOpen] = useState(false);
+
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={(open) => setOpen(open)}>
       <DialogTrigger asChild>
         <Button
           className={cn(
@@ -35,7 +39,7 @@ export function WaitlistPoupup({ buttonClass }: { buttonClass?: string }) {
            We are currently in closed alpha. Sign up to get early access.
           </DialogDescription>
         </DialogHeader>
-        <Waitlist></Waitlist>
+        <Waitlist cb={() => setOpen(false)}></Waitlist>
       </DialogContent>
     </Dialog>
   );

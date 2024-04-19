@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Space_Grotesk, Lexend_Deca } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner"
 
 import "@/styles/globals.css";
 const inter = Poppins({
@@ -47,6 +48,8 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme={"light"} enableSystem>
           {children}
+
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

@@ -5,16 +5,27 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from "./ui/form";
 import { Input } from "./ui/input";
 import { Button, buttonVariants } from "./ui/button";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
 
 const WaitlistSchema = z.object({
-  email: z.string({ required_error: "Email is required" }).min(3, { message: "Email is required" }).max(255, {
-    message: "Email is too long"
-  }).email({ message: "Invalid email address" })
+  email: z
+    .string({ required_error: "Email is required" })
+    .min(3, { message: "Email is required" })
+    .max(255, {
+      message: "Email is too long",
+    })
+    .email({ message: "Invalid email address" }),
 });
 
-export const Waitlist = () => {
+interface WaitlistProps {
+  cb: () => void;
+}
+export const Waitlist = ({ cb }: WaitlistProps) => {
   const form = useForm<z.infer<typeof WaitlistSchema>>({
     resolver: zodResolver(WaitlistSchema),
+    defaultValues: {
+      email: "",
+    },
   });
 
   const onSubmit = (values: z.infer<typeof WaitlistSchema>) => {
@@ -23,6 +34,7 @@ export const Waitlist = () => {
       waitlist_id: 15994,
       referral_link: document.URL,
     };
+
     fetch("https://api.getwaitlist.com/api/v1/signup", {
       method: "POST",
       headers: {
@@ -32,10 +44,12 @@ export const Waitlist = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        cb();
+        toast.success("You will be notified when you are granted access.");
       })
       .catch((error) => {
-        console.log(error);
+        cb();
+        toast.error("Something went wrong. Please try again.");
       });
   };
   return (
@@ -71,7 +85,6 @@ export const Waitlist = () => {
         >
           Join The Waitlist
         </Button>
-      
       </form>
     </Form>
   );
