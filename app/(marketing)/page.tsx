@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
 import {
   Accordion,
   AccordionContent,
@@ -11,8 +9,8 @@ import Image from "next/image";
 import { WaitlistPoupup } from "@/components/waitlist-popup";
 
 export const metadata = {
-  title: "Home",
-  description: "Homepagina",
+  title: "Paymind - AI powered payroll assistant",
+  description: "Paymind is your personal payroll assistant. We use AI to help you with your payroll administration by providing you with the most up-to-date information in an intiutive way.",
 };
 
 export default async function IndexPage() {
@@ -43,6 +41,7 @@ export default async function IndexPage() {
           <Image
             src="/assets/Browser/browser.svg"
             alt="Picture of the author"
+            priority
             width={960}
             height={615}
           />
