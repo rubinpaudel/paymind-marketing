@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 // import { ModeToggle } from "@/components/mode-toggle";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
+import Image from "next/image";
 // import { marketingFooterConfig } from "@/config/marketing";
 
 export function MarketingFooter({
@@ -15,14 +16,14 @@ export function MarketingFooter({
     <footer className={cn(className)}>
       <div className="flex flex-col justify-between items-center gap-4 py-10 bg-green-900 max-w-[64rem] rounded-xl">
           <div className="flex gap-2 items-center justify-center">
-            <img src="/assets/xs/white-green-icon.svg" alt="Paymind" className="w-8 h-8 rounded-full" />
+            <Image src="/assets/xs/white-green-icon.svg" alt="Paymind" className="w-8 h-8 rounded-full" />
             <h1 className="text-2xl text-white text-center font-medium font-heading">
               Paymind
             </h1>
           </div>
 
           <p className="text-sm text-white text-center px-2 md:w-2/3 font-medium">
-            Whether you're calculating salaries, navigating complex regulations, or handling employee queries, Paymind is here to support you every step of the way.
+            Whether you&apos;re calculating salaries, navigating complex regulations, or handling employee queries, Paymind is here to support you every step of the way.
           </p>
 
             {/* Links */}

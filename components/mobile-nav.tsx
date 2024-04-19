@@ -4,6 +4,7 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { MainNavItem } from "@/types"
 import { siteConfig } from "@/config/site"
+import Image from "next/image"
 
 interface MobileNavProps {
   items?: MainNavItem[]
@@ -21,7 +22,7 @@ export function MobileNav({items, children }: MobileNavProps) {
     >
       <div className="relative z-20 grid gap-6 rounded-md bg-popover p-4 text-popover-foreground shadow-md">
         <Link href="/" className="flex items-center space-x-2">
-          <img src="/assets/xs/white-green-icon.svg" alt="Paymind" className="w-8 h-8 rounded-full" />
+          <Image src="/assets/xs/white-green-icon.svg" alt="Paymind" className="w-8 h-8 rounded-full" />
           <span className="font-bold">{siteConfig.name}</span>
         </Link>
         <nav className="grid grid-flow-row auto-rows-max text-sm">

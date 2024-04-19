@@ -7,8 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ContainerScroll } from "@/components/ui/container-scroll-animation";
-import { Shield, Zap } from "lucide-react";
+import Image from "next/image";
 
 export const metadata = {
   title: "Home",
@@ -48,7 +47,7 @@ export default async function IndexPage() {
             </Link>
           </div>
 
-          <img
+          <Image
             src="/assets/Browser/browsere.svg"
             alt="Hero"
             className="md:w-2/3 h-full"
@@ -67,7 +66,7 @@ export default async function IndexPage() {
               You can&apos;t know it all but Paymind can
             </h2>
             <p className="md:max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Whether you're calculating salaries, navigating complex
+              Whether you&apos;re calculating salaries, navigating complex
               regulations, or handling employee queries, Paymind is here to
               support you every step of the way.
             </p>
@@ -76,7 +75,7 @@ export default async function IndexPage() {
             <div className="relative overflow-hidden rounded-lg bg-background p-2">
               <div className="flex flex-col justify-between gap-2">
                 <div className="block rounded-lg bg-yellow-200 w-fit p-4">
-                  <img
+                  <Image
                     src="/assets/icons/lightning.svg"
                     alt="Efficiency"
                     className="w-8 h-8"
@@ -95,7 +94,7 @@ export default async function IndexPage() {
             <div className="relative overflow-hidden rounded-lg bg-background p-2">
               <div className="flex flex-col justify-between gap-2">
                 <div className="block rounded-lg bg-yellow-200 w-fit p-4">
-                  <img
+                  <Image
                     src="/assets/icons/shield.svg"
                     alt="Efficiency"
                     className="w-8 h-8"
@@ -115,7 +114,7 @@ export default async function IndexPage() {
             <div className="relative overflow-hidden rounded-lg bg-background p-2">
               <div className="flex flex-col justify-between gap-2">
                 <div className="block rounded-lg bg-yellow-200 w-fit p-4">
-                  <img
+                  <Image
                     src="/assets/icons/curve.svg"
                     alt="Efficiency"
                     className="w-8 h-8"
@@ -145,7 +144,7 @@ export default async function IndexPage() {
                 <div className="space-y-2">
                   <h3 className="font-medium text-xl">Up-to-date</h3>
                   <p className="text-sm text-muted-foreground">
-                    Stay ahead of the curve with Paymind's commitment to
+                    Stay ahead of the curve with Paymind&apos;s commitment to
                     delivering the latest updates and insights in the field of
                     payroll management. Count on us to keep you informed and
                     empowered in an ever-evolving landscape.
