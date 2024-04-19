@@ -11,6 +11,7 @@ import { MobileNav } from "@/components/mobile-nav";
 import { siteConfig } from "@/config/site";
 import { X } from "lucide-react";
 import { buttonVariants } from "./ui/button";
+import Image from "next/image";
 
 interface MainNavProps {
   items?: MainNavItem[];
@@ -24,7 +25,7 @@ export function MainNav({ items, children }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10 justify-between w-full ">
       <Link href="/" className="hidden items-center md:flex space-x-2">
-        <img
+        <Image
           src="/assets/xs/green-icon.svg"
           alt="Paymind"
           className="w-8 h-8 rounded-full"
@@ -60,7 +61,7 @@ export function MainNav({ items, children }: MainNavProps) {
           <X />
         ) : (
           <>
-            <img
+            <Image
               src="/assets/xs/white-green-icon.svg"
               alt="Paymind"
               className="w-8 h-8 rounded-full"

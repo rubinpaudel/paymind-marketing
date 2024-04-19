@@ -135,7 +135,7 @@ export default async function IndexPage() {
             <div className="relative overflow-hidden rounded-lg bg-background p-2">
               <div className="flex flex-col justify-between gap-2">
                 <div className="block rounded-lg bg-yellow-200 w-fit p-4">
-                  <img
+                  <Image
                     src="/assets/icons/refresh.svg"
                     alt="Up-to-date"
                     className="w-8 h-8"
