@@ -83,7 +83,7 @@ export const Waitlist = ({ cb }: WaitlistProps) => {
           )}
           type="submit"
         >
-          Join The Waitlist
+          Request Access
         </Button>
       </form>
     </Form>
