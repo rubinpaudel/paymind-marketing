@@ -40,12 +40,18 @@ export default async function IndexPage() {
             <WaitlistPoupup></WaitlistPoupup>
           </div>
 
-          <img
+          <Image
             src="/assets/Browser/browser.svg"
+            alt="Picture of the author"
+            width={960}
+            height={615}
+          />
 
+          {/* <img
+            src="/assets/Browser/browser.svg"
             alt="Hero"
             className="md:w-2/3 h-full"
-          />
+          /> */}
           {/* <img src="/assets/Browser/mobile.svg" alt="Hero" className="w-2/3 h-full lg:hidden" /> */}
         </div>
       </section>
