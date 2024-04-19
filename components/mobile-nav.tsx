@@ -22,8 +22,8 @@ export function MobileNav({items, children }: MobileNavProps) {
     >
       <div className="relative z-20 grid gap-6 rounded-md bg-popover p-4 text-popover-foreground shadow-md">
         <Link href="/" className="flex items-center space-x-2">
-          <Image src="/assets/xs/white-green-icon.svg" alt="Paymind" className="w-8 h-8 rounded-full" />
-          <span className="font-bold">{siteConfig.name}</span>
+          <Image src="/assets/xs/white-green-icon.svg" alt="Paymind" className="w-8 h-8 rounded-full" width={32} height={32} />
+          <span className="font-medium font-heading">{siteConfig.name}</span>
         </Link>
         <nav className="grid grid-flow-row auto-rows-max text-sm">
           {items?.map((item, index) => (
