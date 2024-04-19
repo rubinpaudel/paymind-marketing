@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
+import { WaitlistPoupup } from "@/components/waitlist-popup";
 
 export const metadata = {
   title: "Home",
@@ -36,19 +37,12 @@ export default async function IndexPage() {
             up-to-date social law information.
           </p>
           <div className="space-x-4">
-            <Link
-              href="/login"
-              className={cn(
-                buttonVariants({ size: "lg" }),
-                "bg-green hover:bg-green-950"
-              )}
-            >
-              Request Early Access
-            </Link>
+            <WaitlistPoupup></WaitlistPoupup>
           </div>
 
-          <Image
-            src="/assets/Browser/browsere.svg"
+          <img
+            src="/assets/Browser/browser.svg"
+
             alt="Hero"
             className="md:w-2/3 h-full"
           />
@@ -77,6 +71,8 @@ export default async function IndexPage() {
                 <div className="block rounded-lg bg-yellow-200 w-fit p-4">
                   <Image
                     src="/assets/icons/lightning.svg"
+                    width={32}
+                    height={32}
                     alt="Efficiency"
                     className="w-8 h-8"
                   />
@@ -96,7 +92,9 @@ export default async function IndexPage() {
                 <div className="block rounded-lg bg-yellow-200 w-fit p-4">
                   <Image
                     src="/assets/icons/shield.svg"
-                    alt="Efficiency"
+                    width={32}
+                    height={32}
+                    alt="Reliable Information"
                     className="w-8 h-8"
                   />
                 </div>
@@ -116,7 +114,9 @@ export default async function IndexPage() {
                 <div className="block rounded-lg bg-yellow-200 w-fit p-4">
                   <Image
                     src="/assets/icons/curve.svg"
-                    alt="Efficiency"
+                    width={32}
+                    height={32}
+                    alt="Learning Curve"
                     className="w-8 h-8"
                   />
                 </div>
@@ -137,6 +137,8 @@ export default async function IndexPage() {
                 <div className="block rounded-lg bg-yellow-200 w-fit p-4">
                   <Image
                     src="/assets/icons/refresh.svg"
+                    width={32}
+                    height={32}
                     alt="Up-to-date"
                     className="w-8 h-8"
                   />

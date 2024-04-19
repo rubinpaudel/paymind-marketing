@@ -12,6 +12,7 @@ import { siteConfig } from "@/config/site";
 import { X } from "lucide-react";
 import { buttonVariants } from "./ui/button";
 import Image from "next/image";
+import { WaitlistPoupup } from "./waitlist-popup";
 
 interface MainNavProps {
   items?: MainNavItem[];
@@ -27,6 +28,8 @@ export function MainNav({ items, children }: MainNavProps) {
       <Link href="/" className="hidden items-center md:flex space-x-2">
         <Image
           src="/assets/xs/green-icon.svg"
+          width={32}
+          height={32}
           alt="Paymind"
           className="w-8 h-8 rounded-full"
         />
@@ -63,6 +66,8 @@ export function MainNav({ items, children }: MainNavProps) {
           <>
             <Image
               src="/assets/xs/white-green-icon.svg"
+              width={32}
+              height={32}
               alt="Paymind"
               className="w-8 h-8 rounded-full"
             />
@@ -74,16 +79,7 @@ export function MainNav({ items, children }: MainNavProps) {
         <MobileNav items={items}>{children}</MobileNav>
       )}
       <nav className="inline-flex gap-4">
-        <Link
-          href="/login"
-          className={cn(
-            buttonVariants({ variant: "default", size: "sm" }),
-            "px-4",
-            "bg-green hover:bg-green-950"
-          )}
-        >
-          Request Early Access
-        </Link>
+        <WaitlistPoupup></WaitlistPoupup>
       </nav>
     </div>
   );
