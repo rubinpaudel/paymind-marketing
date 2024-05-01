@@ -10,7 +10,8 @@ import { WaitlistPoupup } from "@/components/waitlist-popup";
 
 export const metadata = {
   title: "Paymind - AI powered payroll assistant",
-  description: "Paymind is your personal payroll assistant. We use AI to help you with your payroll administration by providing you with the most up-to-date information in an intiutive way.",
+  description:
+    "Paymind is your personal payroll assistant. We use AI to help you with your payroll administration by providing you with the most up-to-date information in an intiutive way.",
 };
 
 export default async function IndexPage() {
@@ -23,7 +24,8 @@ export default async function IndexPage() {
             className="rounded-2xl bg-gray-50 px-4 py-1.5 text-sm font-medium"
             target="_blank"
           >
-            Paymind is currently in closed alpha.
+            {/* <T keyName="marketing.hero.banner" /> */}
+            Simplify your Payroll with AI
           </Link>
           <h1 className="font-heading text-3xl sm:text-4xl font-bold">
             Simplify your <span className="text-green">Payroll</span> with{" "}
@@ -45,7 +47,6 @@ export default async function IndexPage() {
             width={960}
             height={615}
           />
-
         </div>
       </section>
       <section
