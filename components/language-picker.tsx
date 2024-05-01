@@ -77,10 +77,20 @@ export const LanguagePicker: React.FC = () => {
   }
 
   return (
-    <select className="bg-transparent cursor-pointer" onChange={onSelectChange} value={locale}>
-      <option value="nl-BE">🇧🇪 BE</option>
-      <option value="fr-FR">🇫🇷 FR</option>
-      <option value="en">🇬🇧 EN</option>
+    <select
+      className="bg-transparent cursor-pointer"
+      onChange={onSelectChange}
+      value={locale}
+    >
+      <option value="en">
+        <span>{"🇬🇧 EN"}</span>
+      </option>
+      <option value="nl-BE">
+        <span>{"🇧🇪 BE"}</span>
+      </option>
+      <option value="fr-FR">
+        <span>{"🇫🇷 FR"}</span>
+      </option>
     </select>
   );
 };
