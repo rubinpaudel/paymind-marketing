@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
@@ -21,12 +20,11 @@ export default async function IndexPage() {
     <>
       <section className="container space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
         <div className="flex flex-col items-center justify-center gap-4 text-center">
-          <Link
-            href={"/login"}
+          <span
+
             className="rounded-2xl bg-gray-50 px-4 py-1.5 text-sm font-medium"
-            target="_blank"
             dangerouslySetInnerHTML={{ __html: t("hero.banner") }}
-          ></Link>
+          ></span>
           <h1 className="font-heading text-3xl sm:text-4xl font-bold">
             {/* Simplify your <span className="text-green">Payroll</span> with{" "}
             <span className="text-green">AI</span> */}
