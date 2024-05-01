@@ -28,7 +28,7 @@ export function TolgeeBase() {
     .updateDefaults({
       apiKey,
       apiUrl,
-      fallbackLanguage: "en",
+      fallbackLanguage: "nl-BE",
       staticData: {
         "nl-BE": require("../i18n/nl-BE.json"),
         "fr-FR": require("../i18n/fr-FR.json"),
