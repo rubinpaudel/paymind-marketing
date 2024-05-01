@@ -13,6 +13,7 @@ import { X } from "lucide-react";
 import { buttonVariants } from "./ui/button";
 import Image from "next/image";
 import { WaitlistPoupup } from "./waitlist-popup";
+import { LanguagePicker } from "./language-picker";
 
 interface MainNavProps {
   items?: MainNavItem[];
@@ -79,6 +80,8 @@ export function MainNav({ items, children }: MainNavProps) {
         <MobileNav items={items}>{children}</MobileNav>
       )}
       <nav className="inline-flex gap-4">
+
+        <LanguagePicker></LanguagePicker>
         <WaitlistPoupup></WaitlistPoupup>
       </nav>
     </div>
