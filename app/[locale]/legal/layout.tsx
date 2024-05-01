@@ -22,7 +22,7 @@ export default async function LegalLayout({
       <main className="flex-1">{children}</main>
       {/* <SiteFooter /> */}
 
-      <MarketingFooter className="flex flex-1 items-center justify-center py-12"/>
+      <MarketingFooter className="flex flex-1 items-center justify-center py-12 mx-6 md:mx-0 max-w-xl sm:max-w-2xl md:max-w-full"/>
     </div>
   );
 }
