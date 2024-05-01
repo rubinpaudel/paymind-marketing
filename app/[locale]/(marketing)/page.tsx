@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import Image from "next/image";
 import { WaitlistPoupup } from "@/components/waitlist-popup";
+import { getTranslate } from "@/tolgee/server";
 
 export const metadata = {
   title: "Paymind - AI powered payroll assistant",
@@ -15,6 +16,7 @@ export const metadata = {
 };
 
 export default async function IndexPage() {
+  const t = await getTranslate();
   return (
     <>
       <section className="container space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
@@ -23,18 +25,17 @@ export default async function IndexPage() {
             href={"/login"}
             className="rounded-2xl bg-gray-50 px-4 py-1.5 text-sm font-medium"
             target="_blank"
-          >
-            {/* <T keyName="marketing.hero.banner" /> */}
-            Simplify your Payroll with AI
-          </Link>
+            dangerouslySetInnerHTML={{ __html: t("hero.banner") }}
+          ></Link>
           <h1 className="font-heading text-3xl sm:text-4xl font-bold">
-            Simplify your <span className="text-green">Payroll</span> with{" "}
-            <span className="text-green">AI</span>
+            {/* Simplify your <span className="text-green">Payroll</span> with{" "}
+            <span className="text-green">AI</span> */}
+
+            {t("hero.title")}
+
           </h1>
           <p className="w-full md:max-w-[80%] leading-normal text-muted-foreground sm:text-lg sm:leading-8">
-            Experience the future of payroll with Paymind. Our chat interface,
-            powered by Generative AI, provides instant access to precise and
-            up-to-date social law information.
+            {t("hero.description")}
           </p>
           <div className="space-x-4">
             <WaitlistPoupup></WaitlistPoupup>
@@ -55,14 +56,14 @@ export default async function IndexPage() {
       >
         <div className="container flex flex-col gap-8">
           <div className="mx-auto flex flex-col items-center space-y-4 text-center">
-            <span className="text-green-950 font-medium">Features</span>
+            <span className="text-green-950 font-medium">
+              {t("features.sectionTitle")}
+            </span>
             <h2 className="font-heading text-2xl sm:text-3xl font-bold">
-              You can&apos;t know it all but Paymind can
+              {t("features.title")}
             </h2>
             <p className="md:max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Whether you&apos;re calculating salaries, navigating complex
-              regulations, or handling employee queries, Paymind is here to
-              support you every step of the way.
+              {t("features.description")}
             </p>
           </div>
           <div className="mx-auto grid justify-center gap-16 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
@@ -78,11 +79,9 @@ export default async function IndexPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="font-medium text-xl">Efficiency</h3>
+                  <h3 className="font-medium text-xl">{t("features.efficiency")}</h3>
                   <p className="text-sm text-muted-foreground">
-                    Say goodbye to time-consuming searches and confusion. With
-                    Paymind, you can access accurate payroll information
-                    instantly, saving you valuable time and effort.
+                    {t("features.efficiency.description")}
                   </p>
                 </div>
               </div>
@@ -99,12 +98,11 @@ export default async function IndexPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="font-medium text-xl">Reliable Information</h3>
+                  <h3 className="font-medium text-xl">
+                    {t("features.reliableInformation")}
+                    </h3>
                   <p className="text-sm text-muted-foreground">
-                    Trust in Paymind as your single source of truth for all
-                    payroll-related queries. Our AI-powered assistant ensures
-                    that you have access to the most accurate and up-to-date
-                    information available.
+                    {t("features.reliableInformation.description")}
                   </p>
                 </div>
               </div>
@@ -121,12 +119,11 @@ export default async function IndexPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="font-medium text-xl">No Learning Curve</h3>
+                  <h3 className="font-medium text-xl">
+                    {t("features.learningCurve")}
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    Say goodbye to tedious training sessions. Paymind boasts an
-                    intuitive interface designed for seamless integration into
-                    your existing workflow, eliminating the need for extensive
-                    onboarding.
+                    {t("features.learningCurve.description")}
                   </p>
                 </div>
               </div>
@@ -144,12 +141,11 @@ export default async function IndexPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="font-medium text-xl">Up-to-date</h3>
+                  <h3 className="font-medium text-xl">
+                    {t("features.upToDate")}
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    Stay ahead of the curve with Paymind&apos;s commitment to
-                    delivering the latest updates and insights in the field of
-                    payroll management. Count on us to keep you informed and
-                    empowered in an ever-evolving landscape.
+                    {t("features.upToDate.description")}
                   </p>
                 </div>
               </div>
@@ -160,58 +156,48 @@ export default async function IndexPage() {
 
       <section id="FAQ" className="container py-8 md:py-12 lg:py-24">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
-          <span className="text-green-950 font-medium">FAQ</span>
+          <span className="text-green-950 font-medium">
+            {t("faq.sectionTitle")}
+          </span>
           <h2 className="font-heading text-2xl sm:text-3xl font-bold">
-            Frequently Asked Questions
+            {t("faq.title")}
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            If anything was still unclear, you can find all the answers to your
-            questions in our FAQ.
+            {t("faq.description")}
           </p>
           <Accordion type="single" className="w-full pt-6">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-start">
-                What is Paymind?
+                {t("faq.items.whatIsPaymind")}
               </AccordionTrigger>
               <AccordionContent className="text-start">
-                Paymind is your personal payroll assistant. We use AI to help
-                you with your payroll administration by providing you with the
-                most up-to-date information in an intiutive way.
+              
+                {t("faq.items.whatIsPaymind.description")}
+
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
               <AccordionTrigger className="text-start">
-                How do I get access?
+                {t("faq.items.howToGetAccess")}
               </AccordionTrigger>
               <AccordionContent className="text-start">
-                We are currently in closed alpha. We only provide access to a
-                select group of users selected by our team. You can request
-                early access{" "}
-                <Link href="/request-access" className="underline">
-                  here
-                </Link>
-                .
+                {t("faq.items.howToGetAccess.description")}
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
               <AccordionTrigger className="text-start">
-                Where do you get your information from?
+                {t("faq.items.howIsItUpToDate")}
               </AccordionTrigger>
               <AccordionContent className="text-start">
-                We have a team of experts that keep our information up-to-date.
-                By connecting to various verified sources (Staatsblad, RSZ, RVA,
-                ...), we ensure that you always have the most accurate
-                information.
+                {t("faq.items.howIsItUpToDate.description")}
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
               <AccordionTrigger className="text-start">
-                How much does it cost?
+                {t("faq.items.howMuchDoesItCost")}
               </AccordionTrigger>
               <AccordionContent className="text-start">
-                Paymind is currently free to use for selected users. We are
-                still in the early stages of development and are looking for
-                feedback from our users.
+                {t("faq.items.howMuchDoesItCost.description")}
               </AccordionContent>
             </AccordionItem>
           </Accordion>

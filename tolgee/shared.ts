@@ -1,6 +1,6 @@
 // shared.ts
 
-import { DevTools, Tolgee, FormatSimple } from '@tolgee/web';
+import { DevTools, Tolgee, FormatSimple, BackendFetch } from '@tolgee/web';
 
 export const ALL_LOCALES = ['en', 'nl-BE', 'fr-FR'];
 
@@ -22,10 +22,16 @@ export function TolgeeBase() {
     Tolgee()
       .use(FormatSimple())
       .use(DevTools())
+      .use(BackendFetch(
+        {
+          prefix: 'https://cdn.tolg.ee/ccea17a042a6726a9c146d0c30142bde'
+        }
+      ))
       // Preset shared settings
       .updateDefaults({
         apiKey,
         apiUrl,
       })
+      
   );
 }

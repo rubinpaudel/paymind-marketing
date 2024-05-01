@@ -12,9 +12,10 @@ import {
 import { Waitlist } from "./waitlist";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { useTranslate } from "@tolgee/react";
 
 export function WaitlistPoupup({ buttonClass }: { buttonClass?: string }) {
-
+    const {t} = useTranslate();
     const [open, setOpen] = useState(false);
 
   return (
@@ -27,16 +28,22 @@ export function WaitlistPoupup({ buttonClass }: { buttonClass?: string }) {
             "bg-green hover:bg-green-950"
           )}
         >
-            Request Early Access
+            {t("actions.requestEarlyAccess.button")}
+
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] bg-yellow-200 border-none">
         <DialogHeader>
           <DialogTitle className="font-semibold font-heading text-2xl pb-3">
-            Request Early Access
+            {
+              t("actions.requestEarlyAccess.title")
+            }
           </DialogTitle>
           <DialogDescription className="text-regular">
-           We are currently in closed alpha. Sign up to get early access.
+
+            {
+              t("actions.requestEarlyAccess.description")
+            }
           </DialogDescription>
         </DialogHeader>
         <Waitlist cb={() => setOpen(false)}></Waitlist>

@@ -1,3 +1,4 @@
+"use client";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -6,6 +7,7 @@ import { Input } from "./ui/input";
 import { Button, buttonVariants } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import { useTranslate } from "@tolgee/react";
 
 const WaitlistSchema = z.object({
   email: z
@@ -21,6 +23,8 @@ interface WaitlistProps {
   cb: () => void;
 }
 export const Waitlist = ({ cb }: WaitlistProps) => {
+  const { t } = useTranslate();
+
   const form = useForm<z.infer<typeof WaitlistSchema>>({
     resolver: zodResolver(WaitlistSchema),
     defaultValues: {
@@ -45,11 +49,14 @@ export const Waitlist = ({ cb }: WaitlistProps) => {
       .then((response) => response.json())
       .then((data) => {
         cb();
-        toast.success("You will be notified when you are granted access.");
+        // toast.success("You will be notified when you are granted access.");
+        toast.success(t("actions.requestEarlyAccess.success"));
+
       })
       .catch((error) => {
         cb();
-        toast.error("Something went wrong. Please try again.");
+        // toast.error("Something went wrong. Please try again.");
+        toast.error(t("actions.requestEarlyAccess.error"));
       });
   };
   return (
@@ -83,7 +90,7 @@ export const Waitlist = ({ cb }: WaitlistProps) => {
           )}
           type="submit"
         >
-          Request Access
+          {t("actions.requestEarlyAccess.button")}
         </Button>
       </form>
     </Form>
