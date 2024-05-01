@@ -2,7 +2,7 @@
 
 import { DevTools, Tolgee, FormatSimple, BackendFetch } from '@tolgee/web';
 
-export const ALL_LOCALES = ['en', 'nl-BE', 'fr-FR'];
+export const ALL_LOCALES = ['nl-BE', 'fr-FR', 'en'];
 
 export const DEFAULT_LOCALE = 'nl-BE';
 
