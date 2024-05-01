@@ -29,5 +29,10 @@ export function TolgeeBase() {
       apiKey,
       apiUrl,
       fallbackLanguage: "en",
+      staticData: {
+        "nl-BE": require("../i18n/nl-BE.json"),
+        "fr-FR": require("../i18n/fr-FR.json"),
+        "en": require("../i18n/en.json"),
+      }
     });
 }
