@@ -9,7 +9,7 @@ export default async function PrivacyPolicyPage() {
   return (
     <section className="container space-y-6 pb-8 pt-6 md:pb-12 lg:py-8">
       <div className="container flex flex-col gap-4">
-        <section>
+        <section className="space-y-6">
           <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl">
             Privacy Notice
           </h1>

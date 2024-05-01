@@ -28,7 +28,7 @@ export const LanguagePicker: React.FC = () => {
         {"🇬🇧 EN"}
       </option>
       <option value="nl-BE">
-        {"🇧🇪 BE"}
+        {"🇧🇪 NL"}
       </option>
       <option value="fr-FR">
         {"🇫🇷 FR"}

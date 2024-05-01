@@ -12,7 +12,7 @@ export async function MarketingFooter({
   const t = await getTranslate();
   return (
     <footer className={cn(className)}>
-      <div className="flex flex-col justify-between items-center gap-4 py-10 bg-green-900 max-w-[64rem] rounded-xl">
+      <div className="flex flex-col justify-between items-center gap-4 py-10 bg-green-900 rounded-xl">
         <div className="flex gap-2 items-center justify-center">
           <Image
             src="/assets/xs/white-green-icon.svg"
