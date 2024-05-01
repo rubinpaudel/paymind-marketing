@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Algemene Voorwaarden",
-  description: "Algemene Voorwaarden",
+  title: "Terms and Conditions",
+  description: "Terms and Conditions",
 };
 
 export default async function TermsAndConditionsPage() {
