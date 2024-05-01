@@ -25,13 +25,13 @@ export const LanguagePicker: React.FC = () => {
       value={locale}
     >
       <option value="en">
-        <span>{"🇬🇧 EN"}</span>
+        {"🇬🇧 EN"}
       </option>
       <option value="nl-BE">
-        <span>{"🇧🇪 BE"}</span>
+        {"🇧🇪 BE"}
       </option>
       <option value="fr-FR">
-        <span>{"🇫🇷 FR"}</span>
+        {"🇫🇷 FR"}
       </option>
     </select>
   );
